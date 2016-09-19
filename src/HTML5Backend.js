@@ -179,9 +179,9 @@ export default class HTML5Backend {
 
     // On Firefox, if mousemove fires, the drag is over but browser failed to tell us.
     // This is not true for other browsers.
-    if (isFirefox()) {
-      window.addEventListener('mousemove', this.endDragNativeItem, true);
-    }
+    //if (isFirefox()) {
+    //  window.addEventListener('mousemove', this.endDragNativeItem, true);
+    //}
   }
 
   endDragNativeItem() {
@@ -189,9 +189,9 @@ export default class HTML5Backend {
       return;
     }
 
-    if (isFirefox()) {
-      window.removeEventListener('mousemove', this.endDragNativeItem, true);
-    }
+    //if (isFirefox()) {
+    //  window.removeEventListener('mousemove', this.endDragNativeItem, true);
+    //}
 
     this.actions.endDrag();
     this.registry.removeSource(this.currentNativeHandle);
